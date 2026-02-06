@@ -1,28 +1,40 @@
-import './App.css' // We import the CSS file here
+import { useState } from 'react';
+import './App.css';
 
 function App() {
+
   return (
-    <div className="container">
-      {/* 1) The Title */}
-      <h1 className="title">Ruziev Gofur</h1>
-      <hr className="divider" />
+    <center>
+    <div className="main-container">
+      <h1 className='hello'>Ruziev Gofur</h1>
+      <hr />
 
-      {/* 2) The Text Lines */}
-      <div className="text-lines">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
+      <p>Zor dasturchi</p>
+      <p>Darslari kachestvasina gap bo'lishi mumkin amas, lekin biza asa o'zlarimisni tushungana solib otramz</p>
+      <p>Obshiy aytganda samimiy odom</p>
 
-      {/* 3) The Grid */}
-      <div className="grid-container">
-        {/* Creating 12 boxes for the grid */}
-        {[...Array(12)].map((_, i) => (
-          <div key={i} className="grid-box"></div>
-        ))}
-      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td><td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  )
+    </center>
+  );
 }
 
-export default App
+export default App;
