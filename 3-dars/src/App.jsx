@@ -10,7 +10,7 @@ function App() {
 const data = {
   name: "Jorj Washington",
   profession: "Prezident",
-  age: 34
+  age: 67
 }
 
 const company = "Al Xorazmiy Vorislari"
