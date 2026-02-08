@@ -1,14 +1,13 @@
-
 import viteLogo from '../Hello/vite.svg'
 
 const Hellochild = ({name, profession, age}) => {
-    // console.log(props);
-
     return (
-        <div>
-            <img src="{viteLogo}" alt="" />
-            <h2>Hello word</h2>
-            <p>His job is {profession}, he is {age} years old</p>
+        <div className="hello-child">
+            <img src={viteLogo} alt="Vite logo" />
+            
+            <h2>Salom, {name}!</h2>
+            <p>Kasbi: {profession}</p>
+            <p>Yoshi: {age}</p>
         </div>
     )
 }
