@@ -3,3 +3,7 @@
     margin: 10px;
     padding: 10px;
 }
+
+.hello-child img {
+  width: 200px;
+}
