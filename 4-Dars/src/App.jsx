@@ -64,28 +64,28 @@ import './App.css'
 // }
 
 //2 -mashq
-const App = () => {
-  const [user, setUser] = useState({ name: "Asad", age: "15" })
+// const App = () => {
+//   const [user, setUser] = useState({ name: "Asad", age: "15" })
 
-  return (
-    <div>
-      <h1>Ismi: {user.name}</h1>
-      <h1>Yoshi: {user.age}</h1>
+//   return (
+//     <div>
+//       <h1>Ismi: {user.name}</h1>
+//       <h1>Yoshi: {user.age}</h1>
 
-      <input 
-        type="text" 
-        placeholder="Ism yozing" 
-        onChange={(e) => setUser({ ...user, name: e.target.value })} 
-      />
-      <br />
-      <input 
-        type="number" 
-        placeholder="Yosh yozing" 
-        onChange={(e) => setUser({ ...user, age: e.target.value })} 
-      />
-    </div>
-  )
-}
+//       <input 
+//         type="text" 
+//         placeholder="Ism yozing" 
+//         onChange={(e) => setUser({ ...user, name: e.target.value })} 
+//       />
+//       <br />
+//       <input 
+//         type="number" 
+//         placeholder="Yosh yozing" 
+//         onChange={(e) => setUser({ ...user, age: e.target.value })} 
+//       />
+//     </div>
+//   )
+// }
 
 //3 mashq
 // function App() {
