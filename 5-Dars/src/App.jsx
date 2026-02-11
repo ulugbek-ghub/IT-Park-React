@@ -35,22 +35,22 @@ import './App.css'
 //   return <h1>Xush kelibsiz, oga{user.name}</h1>
 // }
 
-function App() {
-  const [age, setAge] = useState(16)
-  function yosh() {
-    setAge(18)
-  }
+// function App() {
+//   const [age, setAge] = useState(16)
+//   function yosh() {
+//     setAge(18)
+//   }
 
-  if(age < 18) {
-    return (
-      <div>
-        <h1>Siz 18 yosh emassiz</h1>
-        <button onClick={yosh}>Yoshimni ostir</button>
-      </div>
-    )
-  }
-  return <h1>Siz endi 18 yosh</h1>
-}
+//   if(age < 18) {
+//     return (
+//       <div>
+//         <h1>Siz 18 yosh emassiz</h1>
+//         <button onClick={yosh}>Yoshimni ostir</button>
+//       </div>
+//     )
+//   }
+//   return <h1>Siz endi 18 yosh</h1>
+// }
 
 
 
