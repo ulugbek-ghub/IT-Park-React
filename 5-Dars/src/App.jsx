@@ -52,6 +52,8 @@ import './App.css'
 //   return <h1>Siz endi 18 yosh</h1>
 // }
 
+
+
 //UV
 
 // 1mashq
