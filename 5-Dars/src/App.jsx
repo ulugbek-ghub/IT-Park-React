@@ -80,21 +80,30 @@ import './App.css'
 
 //2 mshq
 
-// function App() {
-//     const [role, setRole] = useState("Guest")
-//     if(role === "Admin") {
-//         return <div>Admin panel</div>
-//     }
-//     if(role === "User") {
-//         return <div>User Panel</div>
-//     }
-//     return (
-//         <div>
-//             <h1>Guest</h1>
-//             <button onClick={() => setRole("Admin")}>Admin</button>
-//             <button onClick={() => setRole("User")}>User</button>
-//         </div>
-//     )
-// }
 
-export default App
+function App() {
+    const [role, setRole] = useState("Rol tanlang");
+
+    const roletop = () => {
+        switch (role) {
+            case "Admin": return <div>Admin panel</div>;
+            case "User":  return <div>User Panel</div>;
+            case "Guest": return <div>Guest Panel</div>;
+            default:    return null;
+        }
+    };
+
+    return (
+        <div>
+            <div id='btn-ctnr'>
+                <button onClick={() => setRole("Guest")}>Guest</button>
+                <button onClick={() => setRole("Admin")}>Admin</button>
+                <button onClick={() => setRole("User")}>User</button>
+            </div>
+            <br />
+            {roletop()}
+        </div>
+    )
+}
+
+export default App;
