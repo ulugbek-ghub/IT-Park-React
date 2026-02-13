@@ -81,29 +81,29 @@ import './App.css'
 //2 mshq
 
 
-// function App() {
-//     const [role, setRole] = useState("");
+function App() {
+    const [role, setRole] = useState("");
 
-//     const roletop = () => {
-//         switch (role) {
-//             case "Admin": return <div>Admin panel</div>;
-//             case "User":  return <div>User Panel</div>;
-//             case "Guest": return <div>Guest Panel</div>;
-//             default:    return null;
-//         }
-//     };
+    const roletop = () => {
+        switch (role) {
+            case "Admin": return <div>Admin panel</div>;
+            case "User":  return <div>User Panel</div>;
+            case "Guest": return <div>Guest Panel</div>;
+            default:    return null;
+        }
+    };
 
-//     return (
-//         <div>
-//             <div id='btn-ctnr'>
-//                 <button onClick={() => setRole("Guest")}>Guest</button>
-//                 <button onClick={() => setRole("Admin")}>Admin</button>
-//                 <button onClick={() => setRole("User")}>User</button>
-//             </div>
-//             <br />
-//             {roletop()}
-//         </div>
-//     )
-// }
+    return (
+        <div id='container'>
+            <div>
+                <button onClick={() => setRole("Guest")}>Guest</button>
+                <button onClick={() => setRole("Admin")}>Admin</button>
+                <button onClick={() => setRole("User")}>User</button>
+            </div>
+            <br />
+            {roletop()}
+        </div>
+    )
+}
 
 export default App;

@@ -1,0 +1,25 @@
+* {
+    margin: 7px;
+    background-color: rgb(191, 191, 191);
+
+}
+
+ul {
+    list-style:decimal;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+li {
+    font-size: large;
+
+}
+
+button {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
