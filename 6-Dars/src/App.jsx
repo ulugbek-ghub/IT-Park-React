@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import React from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -13,7 +14,6 @@ import './App.css'
 // }
 
 // List Rendering (map()) - royxatni render qilish uchun ishlatiladi
-import React from 'react'
 
 // const App = () => {
 //   const [cars, setCars] = useState(["BMW", "Audi", "Mercedes", "KIA", "Zeekr"])
@@ -28,6 +28,7 @@ import React from 'react'
 //     </div>
 //   )
 // }
+
 
 const App = () => {
   const [users, setUsers] = useState([
