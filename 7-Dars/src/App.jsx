@@ -1,16 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useRef, useState } from "react";
+import TodoContainer from "./ToDos/TodoContainer";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const todonameref = useRef();
+  const [todos, setTodos] = useState([]);
+
+  function submitHandler(e) {
+    e.preventDefault();
+    if (!todonameref.current.value) return;
+    setTodos([{ id: Date.now(), name: todonameref.current.value }, ...todos]);
+    todonameref.current.value = '';
+  }
+
+  const deleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  };
 
   return (
-    <>
-      
-    </>
-  )
-}
+    <div>
+      <form onSubmit={submitHandler}>
+        <input type="text" placeholder="Todo Name" ref={todonameref} />
+        <button>Create ToDo</button>
+      </form>
+      {/* Pass the function down */}
+      <TodoContainer todos={todos} deleteTodo={deleteTodo} />
+    </div>
+  );
+};
 
-export default App
+export default App;
