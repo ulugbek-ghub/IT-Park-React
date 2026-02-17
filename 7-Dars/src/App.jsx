@@ -7,8 +7,8 @@ const App = () => {
 
   function submitHandler(e) {
     e.preventDefault();
-    if (!todonameref.current.value) return;
-    setTodos([{ id: Date.now(), name: todonameref.current.value }, ...todos]);
+    if (!todonameref.current.value.trim()) return; 
+    setTodos([{ id: Date.now(), name: todonameref.current.value.trim() }, ...todos]);
     todonameref.current.value = '';
   }
 
@@ -22,7 +22,6 @@ const App = () => {
         <input type="text" placeholder="Todo Name" ref={todonameref} />
         <button>Create ToDo</button>
       </form>
-      {/* Pass the function down */}
       <TodoContainer todos={todos} deleteTodo={deleteTodo} />
     </div>
   );
