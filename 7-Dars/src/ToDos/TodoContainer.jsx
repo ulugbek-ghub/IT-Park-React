@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 
-const TodoContainer = ({ todos, deleteTodo }) => {
+const TodoContainer = ({ todos, deleteTodo, statusChanger }) => {
   return (
     <ul>
       {todos.map((todo) => (
@@ -9,6 +9,8 @@ const TodoContainer = ({ todos, deleteTodo }) => {
           key={todo.id} 
           todo={todo} 
           deleteTodo={deleteTodo} 
+          status={todo.status}
+          statusChanger={status}
         />
       ))}
     </ul>
