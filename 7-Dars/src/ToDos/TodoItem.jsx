@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const TodoItem = ({ todo, deleteTodo }) => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [editValue, setEditValue] = useState(todo.name);
+
+  function handleEdit() {
+    if (isEditing) {
+      todo.name = editValue;
+    }
+    setIsEditing(!isEditing);
+  }
+
   return (
-    <li style={{backgroundColor: status=== "DONE" ? "blue" : 'white'}}> 
-      <input type="checkbox"
-      onChange={(e) => statusChanger(e.target)} />
-      <span>{todo.name}</span> 
-      <button onClick={() => deleteTodo(todo.id)}>Todo ochir</button>
+    <li>
+      {isEditing ? (
+        <input
+          type="text"
+          value={editValue}
+          onChange={(e) => setEditValue(e.target.value)}
+        />
+      ) : (
+        <span>{todo.name}</span>
+      )}
+
+      <button onClick={handleEdit}>
+        {isEditing ? "Save" : "Edit"}
+      </button>
+
+      <button onClick={() => deleteTodo(todo.id)}>Delete</button>
     </li>
   );
 };

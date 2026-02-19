@@ -1,16 +1,14 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 
-const TodoContainer = ({ todos, deleteTodo, statusChanger }) => {
+const TodoContainer = ({ todos, deleteTodo }) => {
   return (
     <ul>
       {todos.map((todo) => (
-        <TodoItem 
-          key={todo.id} 
-          todo={todo} 
-          deleteTodo={deleteTodo} 
-          status={todo.status}
-          statusChanger={status}
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          deleteTodo={deleteTodo}
         />
       ))}
     </ul>
