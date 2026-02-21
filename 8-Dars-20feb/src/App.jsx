@@ -65,19 +65,19 @@ import React from 'react'
 // }
 
 
-const App = () => {
-  const [text, setText] = useState('')
+// const App = () => {
+//   const [text, setText] = useState('')
 
-  useEffect(() => {
-    document.title = text || 'React Vite'
-  }, [text])
-  return (
-    <div>
-      <input type="text" value={text} onChange={e => setText(e.target.value)}
-      placeholder='Title ozgartir'/>
-    </div>
-  )
-}
+//   useEffect(() => {
+//     document.title = text || 'React Vite'
+//   }, [text])
+//   return (
+//     <div>
+//       <input type="text" value={text} onChange={e => setText(e.target.value)}
+//       placeholder='Title ozgartir'/>
+//     </div>
+//   )
+// }
 
 
 export default App
