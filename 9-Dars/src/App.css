@@ -1,0 +1,29 @@
+* {
+    background-color: blanchedalmond;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol {
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 20px;
+    border: 3px solid black;
+    padding: 20px 70px;
+    height:max-content;
+    width: 750px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.side-image {
+  width: 900px;
+  height: 1000px;
+}

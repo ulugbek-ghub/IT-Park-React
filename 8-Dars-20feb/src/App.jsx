@@ -4,33 +4,33 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import React from 'react'
 
-// Hooks - useState, useEffect, useRef, useContext, useReducer, useMemo, useCallback
+// Hooks - useState, useEffect, useRef
 
 // useEffect --- 1- argument, callback funtion, asosiy function, 2- argument, array dependencies, har safar component render bo'lganda ishlaydi
 
 
-// function App() {
-//   const [todos, setTodos] = useState([])
-//   // console.log(users);
+function App() {
+  const [todos, setTodos] = useState([])
+  // console.log(users);
   
 
-//   useEffect(() => {
-//     fetch('https://jsonplaceholder.typicode.com/todos')
-//       .then(response => response.json())
-//       .then(json => setTodos(json))
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+      .then(response => response.json())
+      .then(json => setTodos(json))
       
-//   }, [])
+  }, [])
 
-//   return (
-//     <>
-//       <ol>
-//         {todos.map((todo) => (
-//           <li key={todo.id}>{todo.title}</li>
-//         ))}
-//       </ol>
-//     </>
-//   )
-// }
+  return (
+    <>
+      <ol>
+        {todos.map((todo) => (
+          <li key={todo.id}>{todo.title}</li>
+        ))}
+      </ol>
+    </>
+  )
+}
 
 // function App() {
 //   const [users, setUsers] = useState([]);
