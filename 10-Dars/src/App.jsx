@@ -45,9 +45,9 @@ import React, { useReducer, useState } from 'react'
 
 // useMemo --- hisoblash natijasini xotiraga saqlaydi va faqat uni dependencylari o'zgarganda qayta hisoblaydi
 
-import { useMemo } from 'react'
+// import { useMemo } from 'react'
 
-const App = () => {
+// const App = () => {
 //   const calc = 1883 * 78888
 //   console.log(calc);
 
@@ -69,6 +69,38 @@ const App = () => {
 // }
 
 
+
+function reducerFn(state, action) {
+  switch (action.type) {
+    case 'SET_USERS':
+      return { users: action.users }
+    default:
+      return state
+  }
 }
+
+function App() {
+  const [state, dispatch] = useReducer(reducerFn, { users: [] })
+
+  function loadUsers() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => dispatch({ type: 'SET_USERS', users: data }))
+  }
+
+  return (
+    <>
+      <button onClick={loadUsers}>Load Users</button>
+      <ul>
+        {state.users.map((user) => (
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ul>
+    </>
+  )
+}
+
+
+
 
 export default App
