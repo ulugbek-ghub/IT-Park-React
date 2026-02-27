@@ -1,4 +1,6 @@
 import React, { useReducer, useState } from 'react'
+import { useMemo } from 'react'
+import { use } from 'react'
 
 // function reducerFn(state, action) {
 //   switch (action.type) {
@@ -53,7 +55,7 @@ import React, { useReducer, useState } from 'react'
 
 //     const [number, setNumber] = useState('')
 
-//     const kvadratNumber = useMemo(() => {
+//     const kubNumber = useMemo(() => {
 //         return number * number * number
 //     }, [number])
 
@@ -62,22 +64,24 @@ import React, { useReducer, useState } from 'react'
 //       <input type="number" value={number} onChange={e => setNumber(e.target.value)} placeholder='Kub qilish uchun sonni kriiting'/>
 
 //       <h2>
-//         Kub: {kvadratNumber}
+//         Kub: {kubNumber}
 //       </h2>
 //     </div>
 //   )
 // }
 
+const calc = useMemo(() => {
+    return 1883 * 78888
+}, [])
 
+   const callbackHook = useMemo(() => {
+    return () => {
+        console.log('Callback Hook ishladi');
+    }
+   }, [])
 
-function reducerFn(state, action) {
-  switch (action.type) {
-    case 'SET_USERS':
-      return { users: action.users }
-    default:
-      return state
-  }
-}
+   console.log(callbackHook);
+
 
 function App() {
   const [state, dispatch] = useReducer(reducerFn, { users: [] })
