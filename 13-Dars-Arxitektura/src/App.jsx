@@ -12,14 +12,6 @@ const App = () => {
 
     return (
         <>
-            <nav className="navbar">
-                <a className="navbar-brand" href="#">Recipe App</a>
-                <ul className="navbar-links">
-                    <li><a href="#">Create Recipes</a></li>
-                    <li><a href="#">Saved Recipes</a></li>
-                    <li><a href="#">Authentication</a></li>
-                </ul>
-            </nav>
             <div className="container">
                 {data?.recipes?.map((recipe) => (
                     <RecipeDetails key={recipe.id} recipe={recipe} />
