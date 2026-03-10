@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 export default function App() {
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState(null)
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/10")
       .then((r) => r.json())
-      .then(setProduct);
+      .then(setProduct)
   }, []);
 
   if (!product) return null;
