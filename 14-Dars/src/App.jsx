@@ -1,16 +1,27 @@
-import { useEffect } from 'react'
-import useFetch from './useFetch'
+import { useState, useEffect } from "react";
+import "./App.css";
 
-function App() {
-  const [data, loading] = useFetch("https://fakestoreapi.com/products")
-  console.log(data, loading);
+export default function App() {
+  const [product, setProduct] = useState(null);
 
-    // if (data) {
-    //   console.log(data)
-    // }
-  
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products/10")
+      .then((r) => r.json())
+      .then(setProduct);
+  }, []);
 
-  if (loading) return <p>Loading...</p>
+  if (!product) return null;
+
+  return (
+    <div className="page">
+      <div className="card">
+        <img src={product.image} alt={product.title} />
+        <div className="row">
+          <span className="name">{product.title}</span>
+          <span className="price">${product.price}</span>
+        </div>
+        <p className="desc">{product.description}</p>
+      </div>
+    </div>
+  );
 }
-
-export default App

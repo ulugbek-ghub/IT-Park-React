@@ -1,0 +1,44 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.card {
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 24px;
+  width: 320px;
+}
+
+.card img {
+  width: 97%;
+  margin-bottom: 16px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 14px;
+  flex: 1;
+  color: #111;
+}
+
+.price {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.desc {
+  font-size: 13px;
+  color: grey
+}
