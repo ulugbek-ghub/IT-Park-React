@@ -5,10 +5,14 @@ export default function App() {
   const [product, setProduct] = useState(null)
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/10")
+    fetch("https://fakestoreapi.com/products/")
       .then((r) => r.json())
       .then(setProduct)
   }, []);
+
+  if(product){
+    product.length = 10
+  }
 
   if (!product) return null;
 
@@ -23,5 +27,5 @@ export default function App() {
         <p className="desc">{product.description}</p>
       </div>
     </div>
-  );
+  )
 }
