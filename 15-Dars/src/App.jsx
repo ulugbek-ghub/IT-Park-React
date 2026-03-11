@@ -1,6 +1,10 @@
 import React from 'react'
 import Layout from '../components/navbar'
 import Dashboard from '../pages/Dashboard'
+import { Routes, Route } from 'react-router'
+import About from '../pages/About'
+import Settings from '../pages/Settings'
+import Contact from '../pages/Contact'
 
 const App = () => {
   return (

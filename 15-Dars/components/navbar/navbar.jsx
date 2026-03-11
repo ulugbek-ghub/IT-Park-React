@@ -1,9 +1,10 @@
 import React from 'react'
+import { NavLink } from 'react-router'
 
 
-const Navbar = ({children}) => {
+const Navbar = () => {
   return (
-    <div>
+    <nav>
         <ul>
             <NavLink to={"/"}>Dashboard</NavLink>
             <NavLink to={"/about"}>About</NavLink>
@@ -11,7 +12,7 @@ const Navbar = ({children}) => {
             <NavLink to={"/contact"}>Contact</NavLink>
 
         </ul>
-    </div>
+    </nav>
   )
 }
 
