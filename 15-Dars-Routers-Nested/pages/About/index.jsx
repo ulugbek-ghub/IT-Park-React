@@ -5,7 +5,7 @@ const About = () => {
     <div className="page-wrapper">
       <div className="about-hero">
         <h1>Biz haqimizda</h1>
-        <p className="about-desc">Biz katta kompaniya bolib, har xil hizmatla va servislani taklif qilamiz — har qanday website, dastur va web app yaratish bilan shugullanamiz.</p>
+        <p className="about-desc">Biz katta kompaniya bolib, har xil hizmatla va servislani taklif qilamiz har qanday website, dastur va web app yaratish bilan shugullanamiz.</p>
       </div>
       <div className="about-grid">
         <div className="about-text">
