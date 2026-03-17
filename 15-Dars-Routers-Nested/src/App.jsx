@@ -37,3 +37,7 @@ const App = () => {
 }
 
 export default App
+
+// Dinamik router
+// Nested
+// AuthGuard
