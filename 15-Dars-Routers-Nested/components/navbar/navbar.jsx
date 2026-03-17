@@ -6,11 +6,11 @@ const Navbar = ({ children }) => {
     <>
       <nav>
         <ul>
-          <NavLink to="/">Dashbord</NavLink>
+          <NavLink to="/">Dashboard</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/settings">Settings</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          <NavLink to="/users/1">Users Detals</NavLink>
+          <NavLink to="/users">Users</NavLink>
         </ul>
       </nav>
       <div className="page-wrapper">

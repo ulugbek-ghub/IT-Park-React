@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/navbar'
 import Dashboard from '../pages/Dashboard'
-import { Routes, Route, Router } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import About from '../pages/About'
 import Settings from '../pages/Settings'
 import Contact from '../pages/Contact'
@@ -9,7 +9,7 @@ import Error from '../pages/Error'
 import UserDetails from '../pages/userDetails/userDetails'
 import Users from '../pages/userDetails'
 import Guest from '../pages/Contact/guest'
-import AuthGuards from './routes/authGuard'
+import AuthGuard from './routes/authGuard'
 
 const App = () => {
   return (
@@ -18,18 +18,17 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Dashboard />} />
           <Route path='/about' element={<About />} />
-          <Route path='settings' element={<authGuard> <Settings/> </authGuard>} />
-          <Route path='contact' element= {<authGuard> <Contact/> </authGuard>} />
 
-          <Route path=':id' element= {<UserDetails />} />
+          <Route element={<AuthGuard />}>
+            <Route path='settings' element={<Settings />} />
+            <Route path='users' element={<Users />} />
+            <Route path='contact' element={<Contact />}>
+              <Route path='guest' element={<Guest />} />
+            </Route>
+          </Route>
 
-{/* 
-          <Route path='guest' element={<Guest />}>
-          </Route> */}
+          <Route path='users/:id' element={<UserDetails />} />
 
-          {/* <Route path='/contact' element={<Contact />} /> */}
-          {/* <Route path='/users' element= {<Users />}> 
-          </Route> */}
           <Route path='*' element={<Error />} />
         </Routes>
       </Layout>
@@ -38,8 +37,3 @@ const App = () => {
 }
 
 export default App
-
-
-// Dinamik router
-// Nested
-// AuthGuard

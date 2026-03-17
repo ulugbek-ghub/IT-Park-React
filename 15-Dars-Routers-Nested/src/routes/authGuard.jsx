@@ -1,9 +1,11 @@
-import React from 'react'
-import { Navigate } from 'react-router'
+import { Navigate, Outlet } from 'react-router-dom'
 
-const AuthGuards = ({auth, children}) => {
-  if(!auth) return <Navigate to = {"/"} />
-  return children
+const isAuthenticated = () => {
+  return localStorage.getItem('token') !== null
 }
 
-export default AuthGuards
+const AuthGuard = () => {
+  return isAuthenticated() ? <Outlet /> : <Navigate to='/' replace />
+}
+
+export default AuthGuard
