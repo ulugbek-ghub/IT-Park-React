@@ -22,8 +22,8 @@ const App = () => {
           <Route element={<AuthGuard />}>
             <Route path='settings' element={<Settings />} />
             <Route path='users' element={<Users />} />
-            <Route path='contact' element={<Contact />}>
-              <Route path='guest' element={<Guest />} />
+            <Route path='guest' element={<Guest />}>
+              <Route path='contact' element={<Contact />} />
             </Route>
           </Route>
 
@@ -41,3 +41,4 @@ export default App
 // Dinamik router
 // Nested
 // AuthGuard
+

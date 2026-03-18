@@ -1,7 +1,7 @@
-import { Navigate, Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router'
 
 const isAuthenticated = () => {
-  return localStorage.getItem('token') !== null
+  return localStorage.getItem('token') == null
 }
 
 const AuthGuard = () => {
