@@ -214,7 +214,7 @@ body {
 
 .theme-toggle {
   margin-left: auto;
-  padding: 10px 24px;
+  padding: 9px 20px;
   border: 1px solid var(--border);
   background-color: var(--surface);
   color: var(--silver-light);
@@ -224,6 +224,7 @@ body {
   transition: 0.2s;
   position: absolute;
   right: 32px;
+  top: 12px;
 }
 
 .theme-toggle:hover {

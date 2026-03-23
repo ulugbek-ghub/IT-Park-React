@@ -18,7 +18,7 @@ function Navbar() {
         <NavLink to="/contact" className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}>Contact</NavLink>
         <NavLink to="/settings" className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}>Settings</NavLink>
         <button className="theme-toggle" onClick={toggle}>
-          {dark ? "☀️ Light" : "🌙 Dark"}
+          {dark ? "☀️ " : "🌙 "}
         </button>
       </div>
     </nav>
