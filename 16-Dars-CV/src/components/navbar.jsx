@@ -1,6 +1,15 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 function Navbar() {
+
+  const [dark, setDark] = useState(true);
+
+  const toggle = () => {
+    setDark(!dark);
+    document.documentElement.setAttribute("data-theme", dark ? "light" : "dark");
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-links">
@@ -8,6 +17,9 @@ function Navbar() {
         <NavLink to="/about" className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}>About</NavLink>
         <NavLink to="/contact" className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}>Contact</NavLink>
         <NavLink to="/settings" className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}>Settings</NavLink>
+        <button className="theme-toggle" onClick={toggle}>
+          {dark ? "☀️ Light" : "🌙 Dark"}
+        </button>
       </div>
     </nav>
   );

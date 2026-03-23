@@ -37,6 +37,7 @@ body {
   padding: 20px 32px;
   border-bottom: 1px solid var(--border);
   background-color: var(--bg);
+  position: relative;
 }
 
 .navbar-links {
@@ -212,6 +213,7 @@ body {
 }
 
 .theme-toggle {
+  margin-left: auto;
   padding: 10px 24px;
   border: 1px solid var(--border);
   background-color: var(--surface);
@@ -220,9 +222,53 @@ body {
   cursor: pointer;
   border-radius: 8px;
   transition: 0.2s;
+  position: absolute;
+  right: 32px;
 }
 
 .theme-toggle:hover {
   border-color: var(--silver);
   color: var(--white);
+}
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 62px);
+  gap: 16px;
+}
+
+.error-code {
+  font-size: 120px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  color: var(--white);
+}
+
+.error-msg {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--silver-dim);
+}
+
+.error-btn {
+  margin-top: 16px;
+  padding: 12px 36px;
+  border: 1px solid var(--silver-dim);
+  color: var(--silver-light);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+.error-btn:hover {
+  background-color: var(--white);
+  color: var(--bg);
+  border-color: var(--white);
+  transition: 0.2s;
 }
