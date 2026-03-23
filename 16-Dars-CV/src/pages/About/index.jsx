@@ -9,7 +9,7 @@ function About() {
       <section className="page">
         <h2 className="page-title">About Me</h2>
         <p className="page-desc">
-          I'm a Full Stack Developer, i can create user experiences with my various coding skills.
+          I'm a 15 year old Full Stack Developer located in Uzbekistan/Khorezm/Urganch, i can create user experiences with my various coding skills.
           i can ensure that your web apps are Responsive, User-freindly and Affordable AF.
         </p>
         <p className="page-desc">
