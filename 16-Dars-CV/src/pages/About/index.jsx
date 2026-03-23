@@ -13,8 +13,8 @@ function About() {
           i can ensure that your web apps are Responsive, User-freindly and Affordable AF.
         </p>
         <p className="page-desc">
-          I've been in this Programmer business for like 2-3 years now, 
-          ofc with the help of our mentors in IT-Park(Urgench), Oybek brat bn G'ofur brat oddushiiii!
+          I've been in this Programming business for like 2-3 years now, 
+          ofc with the help of our mentors in IT-Park Urgench, Oybek brat bn G'ofur brat oddushiiii!
         </p>
         <h3 className="skills-title">Skills</h3>
         <div className="skills-list">
