@@ -1,10 +1,11 @@
-import React from 'react'
 
-const App = () => {
+
+function App() {
+
   return (
-    <div>
-      
-    </div>
+    <>
+      <h1 className="text-7xl text-red-600">Hello w00rld</h1>
+    </>
   )
 }
 
