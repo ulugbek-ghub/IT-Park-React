@@ -1,11 +1,14 @@
-
+import { BrowserRouter } from "react-router-dom"
+import AppRoutes from "./routes/route"
+import Layout from "./components/index"
 
 function App() {
-
   return (
-    <>
-      <h1 className="text-7xl text-red-600">Hello w00rld</h1>
-    </>
+    <BrowserRouter>
+      <Layout>
+        <AppRoutes />
+      </Layout>
+    </BrowserRouter>
   )
 }
 

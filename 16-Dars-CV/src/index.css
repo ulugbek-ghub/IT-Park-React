@@ -37,8 +37,13 @@ body {
   align-items: center;
   padding: 28px 48px;
   border-bottom: 1px solid var(--border);
-  background-color: var(--bg);
-  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .navbar-links {
@@ -69,10 +74,36 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: calc(100vh - 76px);
+  margin-top: 0;     
+  height: 100vh;         
+  padding-top: 76px;
   padding: 48px;
-  background: #000000;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 40%, rgba(255, 255, 255, 1) 120%);
+ 
+  background-color: #000000;
+  background-size: 200% 200%;
+  background-image:
+    radial-gradient(ellipse at 15% 10%, rgba(0, 0, 0, 0.18) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 5%, rgba(255, 255, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(ellipse at 70% 80%, rgba(255, 255, 255, 0.14) 0%, transparent 50%),
+    radial-gradient(ellipse at 5% 75%, rgba(255, 255, 255, 0.07) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 50%, rgba(60, 60, 60, 0.5) 0%, transparent 70%);
+
+  animation: drift 6s ease-in infinite;
+
+}
+
+@keyframes drift {
+  0% {
+    background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%, 50% 50%;
+  }
+
+  50% {
+    background-position: 20% 20%, 80% 10%, 90% 80%, 10% 80%, 50% 50%;
+  }
+
+  100% {
+    background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%, 50% 50%;
+  }
 }
 
 .hero-pfp {
@@ -276,6 +307,11 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

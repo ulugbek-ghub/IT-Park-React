@@ -14,9 +14,16 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<ErrorPage />} />
+        
       </Routes>
     </BrowserRouter>
+    
   );
+  
 }
+
+
+
+
 
 export default App;
