@@ -1,9 +1,9 @@
-import React from "react";
-import V1ector from "./V1ector.png";
-import Vector from "./Vector.png";
-import Vector1 from "./Vector (1).png";
-import Vector2 from "./Vector (2).png";
-import Vector3 from "./Vector (3).png";
+import React from "react"
+import V1ector from "./V1ector.png"
+import Vector from "./Vector.png"
+import Vector1 from "./Vector (1).png"
+import Vector2 from "./Vector (2).png"
+import Vector3 from "./Vector (3).png"
 
 const Navbar = () => {
   return (
@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Navbar
