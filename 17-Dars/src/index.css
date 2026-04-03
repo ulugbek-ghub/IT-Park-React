@@ -177,6 +177,7 @@
   border-radius: 10px;
   height: 80px;
   margin-top: 15px;
+  margin-left: 0;
   align-items: center;
   padding: 10px;
 
@@ -279,4 +280,14 @@
 
 .right {
   flex: 1;
+}
+
+.catalog {
+  display: flex;
+  flex-direction: row; /* ADD THIS LINE */
+  gap: 30px;
+  margin-left: 130px;
+  margin-right: 130px; /* Add right margin too */
+  margin-top: 65px;
+  align-items: flex-start; /* Add this so sidebar doesn't stretch */
 }

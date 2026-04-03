@@ -1,4 +1,4 @@
-
+/* ===== HERO BANNER ===== */
 .bob {
   background: linear-gradient(135deg, #3b3e46 0%, #4a4d56 100%);
   display: flex;
@@ -6,9 +6,8 @@
   justify-content: space-between;
   padding: 50px 80px;
   border-radius: 16px;
-  margin: 20px 40px;
-  position: relative;
-  overflow: hidden;
+  margin: 20px 80px;
+  min-height: 400px;
 }
 
 .bob > div:first-child img {
@@ -52,37 +51,53 @@
   margin-top: 10px;
 }
 
-/* ===== CATALOG LAYOUT ===== */
+/* ===== FILTER TITLE ===== */
+.dash > h1 {
+  margin: 40px 80px 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #282739;
+}
+
+/* ===== CATALOG LAYOUT - FIXED ===== */
 .catalog {
   display: flex;
+  flex-direction: row;
   gap: 30px;
-  margin: 40px 80px;
+  margin: 0 80px 60px;
   align-items: flex-start;
+  width: auto;
+  max-width: calc(100% - 160px);
 }
 
+/* Left sidebar - FIXED WIDTH */
 .left {
-  width: 260px;
+  width: 280px;
+  min-width: 280px; /* Prevent shrinking */
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* Right content */
 .right {
   flex: 1;
   min-width: 0;
 }
 
-/* ===== FILTER SIDEBAR ===== */
+/* ===== FILTER BOX ===== */
 .rr {
   background: #F4F7FB;
   border-radius: 12px;
   padding: 24px;
-  margin-bottom: 20px;
 }
 
 .rr h3 {
   font-size: 15px;
   font-weight: 700;
   color: #282739;
-  margin: 20px 0 12px 0;
+  margin: 20px 0 12px;
 }
 
 .rr h3:first-child {
@@ -102,19 +117,19 @@
 }
 
 .hh input {
-  width: 60px;
+  width: 70px;
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 6px;
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .hh span {
   color: #999;
 }
 
-/* Checkbox alignment fix */
+/* Checkboxes */
 .ii1 > div {
   display: flex;
   align-items: center;
@@ -126,13 +141,11 @@
   width: 16px;
   height: 16px;
   margin: 0;
-  flex-shrink: 0;
 }
 
 .ii1 label {
-  font-size: 13px;
+  font-size: 14px;
   color: #333;
-  line-height: 1.4;
 }
 
 .rr h4 {
@@ -141,9 +154,6 @@
   cursor: pointer;
   font-size: 13px;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
 
 /* ===== PRODUCT OF MONTH ===== */
@@ -152,7 +162,8 @@
   border-radius: 12px;
   padding: 20px;
   color: #fff;
-  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .uu > div:first-child {
@@ -187,7 +198,7 @@
 .flex-uu h2 {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin: 0 0 6px;
 }
 
 .flex-uu h3 {
@@ -205,6 +216,8 @@
   border-radius: 12px;
   padding: 16px;
   color: #fff;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .uu2 img {
@@ -264,7 +277,7 @@
 
 .product-image img {
   max-width: 100%;
-  height: 140px;
+  height: 160px;
   object-fit: contain;
 }
 
@@ -273,7 +286,6 @@
   font-weight: 700;
   color: #282739;
   margin-bottom: 8px;
-  line-height: 1.3;
 }
 
 .product-features {
@@ -314,13 +326,13 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
   .products-grid { grid-template-columns: repeat(2, 1fr); }
-  .bob, .catalog { margin: 20px; }
-  .catalog { gap: 20px; }
+  .bob, .catalog, .dash > h1 { margin-left: 40px; margin-right: 40px; }
+  .catalog { max-width: calc(100% - 80px); }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .catalog { flex-direction: column; }
-  .left { width: 100%; }
+  .left { width: 100%; min-width: auto; }
   .products-grid { grid-template-columns: 1fr; }
   .bob { flex-direction: column; text-align: center; padding: 30px; }
   .iooi h2 { font-size: 28px; }

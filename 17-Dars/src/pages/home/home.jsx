@@ -5,6 +5,7 @@ import rasm1 from "./6V7A6493 3.png"
 import apka from "./portrait-cheerful-attractive-young-woman-longsleeve-standing-with-arms-crossed-smiling_adobespark 2.png"
 import ggg from "./Arrow 18 (Stroke).png"
 import hhh from "./6V7Aa6493 1.png"
+import './home.css';
 
 const Home = () => {
   const products = [
@@ -190,6 +191,8 @@ const Home = () => {
 
 
     </div>
+
+    
   );
 };
 
