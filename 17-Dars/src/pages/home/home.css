@@ -1,4 +1,4 @@
-/* ===== HERO BANNER ===== */
+
 .bob {
   background: linear-gradient(135deg, #3b3e46 0%, #4a4d56 100%);
   display: flex;
@@ -51,7 +51,6 @@
   margin-top: 10px;
 }
 
-/* ===== FILTER TITLE ===== */
 .dash > h1 {
   margin: 40px 80px 20px;
   font-size: 24px;
@@ -59,7 +58,6 @@
   color: #282739;
 }
 
-/* ===== CATALOG LAYOUT - FIXED ===== */
 .catalog {
   display: flex;
   flex-direction: row;
@@ -70,23 +68,20 @@
   max-width: calc(100% - 160px);
 }
 
-/* Left sidebar - FIXED WIDTH */
 .left {
   width: 280px;
-  min-width: 280px; /* Prevent shrinking */
+  min-width: 280px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Right content */
 .right {
   flex: 1;
   min-width: 0;
 }
 
-/* ===== FILTER BOX ===== */
 .rr {
   background: #F4F7FB;
   border-radius: 12px;
@@ -156,7 +151,6 @@
   font-weight: 600;
 }
 
-/* ===== PRODUCT OF MONTH ===== */
 .uu {
   background: #F3A712;
   border-radius: 12px;
@@ -207,7 +201,6 @@
   margin: 0;
 }
 
-/* ===== MANAGER CARD ===== */
 .uu2 {
   background: #8FE865;
   display: flex;
@@ -234,7 +227,6 @@
   line-height: 1.3;
 }
 
-/* ===== PRODUCTS GRID ===== */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -323,7 +315,6 @@
   margin-top: auto;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   .bob, .catalog, .dash > h1 { margin-left: 40px; margin-right: 40px; }
