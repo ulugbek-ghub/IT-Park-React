@@ -294,12 +294,23 @@
 
 .product-price {
   margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .new-price {
   font-size: 18px;
   font-weight: 800;
   color: #282739;
+  line-height: 1;
+}
+
+.old-price {
+  font-size: 14px;
+  color: #999999;
+  text-decoration: line-through;
+  font-weight: 500;
 }
 
 .buy-btn {
